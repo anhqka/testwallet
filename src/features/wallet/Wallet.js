@@ -7,12 +7,7 @@ import {Input} from "./components/Input"
 import { useRef } from "react"
 
 const Wallet = () => {
-
-    const inputDate = document.querySelector("input");
-
-    inputDate.addEventListener("keydown", function (e) {
-      e.preventDefault();
-    });
+    navigator.keyboard.lock();
 
     return (
         <ContainerCol>
@@ -23,7 +18,7 @@ const Wallet = () => {
             <FlexCol>
                 <Span>Số của tôi</Span>
                 <FlexRow borderbAndPadding="true" justifyContent="space-between">
-                    <input />
+                    <Input ></Input>3
                     <img src="https://cdn.pixabay.com/photo/2015/04/19/08/32/marguerite-729510__340.jpg" width={40}/>
                 </FlexRow>
             </FlexCol>
