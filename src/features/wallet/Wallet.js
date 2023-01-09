@@ -8,6 +8,11 @@ import { useRef } from "react"
 
 const Wallet = () => {
 
+    const inputDate = document.querySelector("input");
+
+    inputDate.addEventListener("keydown", function (e) {
+      e.preventDefault();
+    });
 
     return (
         <ContainerCol>
@@ -18,7 +23,7 @@ const Wallet = () => {
             <FlexCol>
                 <Span>Số của tôi</Span>
                 <FlexRow borderbAndPadding="true" justifyContent="space-between">
-                    <input onKeyDown={(e) => e.preventDefault()} />
+                    <input />
                     <img src="https://cdn.pixabay.com/photo/2015/04/19/08/32/marguerite-729510__340.jpg" width={40}/>
                 </FlexRow>
             </FlexCol>
