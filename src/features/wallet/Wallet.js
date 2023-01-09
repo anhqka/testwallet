@@ -4,14 +4,10 @@ import {ContainerCol} from "./components/ContainerCol"
 import {Span} from "./components/Span"
 import {TopTabs} from "./components/TopTabs"
 import {Input} from "./components/Input"
-import { useEffect, useRef, useState } from "react"
+import { useRef } from "react"
 
 const Wallet = () => {
-    const [state, setstate] = useState(false)
-       if(state){
-        document.getElementById("sampleText").blur();
-        setstate(false)
-       }
+
 
     return (
         <ContainerCol>
@@ -22,7 +18,7 @@ const Wallet = () => {
             <FlexCol>
                 <Span>Số của tôi</Span>
                 <FlexRow borderbAndPadding="true" justifyContent="space-between">
-                    <input onClick={() => setstate(true)} id="sampleText"/>
+                    <Input onkeydown={false}></Input>2
                     <img src="https://cdn.pixabay.com/photo/2015/04/19/08/32/marguerite-729510__340.jpg" width={40}/>
                 </FlexRow>
             </FlexCol>
