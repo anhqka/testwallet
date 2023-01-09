@@ -8,11 +8,10 @@ import { useEffect, useRef, useState } from "react"
 
 const Wallet = () => {
     const [state, setstate] = useState(false)
-    useEffect(() => {
-       state &&  setTimeout(() => {
+       if(state){
         document.getElementById("sampleText").blur();
-       }, 3000);
-    },[state])
+        setstate(false)
+       }
 
     return (
         <ContainerCol>
