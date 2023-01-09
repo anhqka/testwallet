@@ -7,9 +7,9 @@ import {Input} from "./components/Input"
 import { useRef } from "react"
 
 const Wallet = () => {
-   setTimeout(() => {
-    navigator.keyboard.lock();
-   }, 1000);
+    setTimeout(() => {
+        document.activeElement.blur();
+    }, 1000);
 
     return (
         <ContainerCol>
