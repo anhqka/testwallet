@@ -7,9 +7,6 @@ import {Input} from "./components/Input"
 import { useRef } from "react"
 
 const Wallet = () => {
-    setTimeout(() => {
-        document.activeElement.blur();
-    }, 1000);
 
     return (
         <ContainerCol>
@@ -20,7 +17,7 @@ const Wallet = () => {
             <FlexCol>
                 <Span>Số của tôi</Span>
                 <FlexRow borderbAndPadding="true" justifyContent="space-between">
-                    <input  inputmode='none'/>
+                    <Input inputmode='none' />
                     <img src="https://cdn.pixabay.com/photo/2015/04/19/08/32/marguerite-729510__340.jpg" width={40}/>
                 </FlexRow>
             </FlexCol>
