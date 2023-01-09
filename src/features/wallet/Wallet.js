@@ -6,6 +6,7 @@ import {TopTabs} from "./components/TopTabs"
 import {Input} from "./components/Input"
 
 const Wallet = () => {
+    document.activeElement.blur();
     return (
         <ContainerCol>
             <FlexRow justifyContent="start">
