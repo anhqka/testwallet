@@ -40,10 +40,10 @@ const Wallet = () => {
                 }}>
                     
                 {cells.map((cell) => cell === 0 && <SubmitCell>  <ChildrenCell>Tiếp tục</ChildrenCell>  </SubmitCell>)}
-                <Keyboard >
+                {/* <Keyboard >
                     {cells.map((cell) => <Cell cell={cell}> {cell === 1 ? "1" : cell === 2 ? "2" : cell === 3 ? "3" : cell === 4 ? "4" : cell === 5 ? "5" : cell === 6 ? "6" : cell === 7 ? "7" : cell === 8 ? "8" : cell === 9 ? "9" : cell === 10 ? "0" : cell === 12 ? "X" : ""} </Cell>
                     )}
-                </Keyboard>
+                </Keyboard> */}
             </ContainerKeyboard>
         </ContainerCol>
     )
