@@ -3,24 +3,24 @@ import { FlexRow } from "./components/FlexRow"
 import { Span } from "./components/Span"
 import { TopTabs } from "./components/TopTabs"
 import { Input } from "./components/Input"
-import { useEffect, useState } from "react"
+import { useState } from "react"
 import { ContainerCol } from "./components/ContainerCol"
-import { Cell0, Cell1, Cell2, Cell3, Cell4, Cell5, Cell6, Cell7, Cell8, Cell9, CellRemove, CellContinue } from "./components/keyboard/Cell"
+import { Cell, CellContinue } from "./components/keyboard/Cell"
 import { Keyboard } from "./components/keyboard/Keyboard"
+import { ChildrenCell } from "./components/ChildrenCell"
 
 
 const Wallet = () => {
     const [showKeyboard, setShowKeyboard] = useState(false)
-    // useEffect(() => {
-    //     const inpPhoneNumber = document.querySelector("#inpPhoneNumber")
-    //     inpPhoneNumber.addEventListener("blur", (e) => {
-    //         e.preventDefault()
-    //         return
-    //     })
-    // }, [])
+    const [cells, setCells] = useState([0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12])
+
+    const handleShowKeyBoard = () => {
+        setShowKeyboard(false)
+    }
+
 
     return (
-        <ContainerCol>
+        <ContainerCol onMouseDown={handleShowKeyBoard}>
             <FlexRow justifyContent="start">
                 <TopTabs>Nạp tiền điện thoại</TopTabs>
                 <TopTabs>Nạp data 3G/4G</TopTabs>
@@ -28,26 +28,16 @@ const Wallet = () => {
             <FlexCol>
                 <Span>Số của tôi</Span>
                 <FlexRow borderbAndPadding="true" justifyContent="space-between">
-                    <Input onMouseOut={(e) => e.preventDefault()} onClick={() => setShowKeyboard(true)} onMouseLeave={() => {
-                        setShowKeyboard(false)
-                    }}/>
+                    <Input onMouseOut={(e) => e.preventDefault()} onClick={() => setShowKeyboard(true)} />
                     <img src="https://cdn.pixabay.com/photo/2015/04/19/08/32/marguerite-729510__340.jpg" width={40} />
                 </FlexRow>
             </FlexCol>
 
-            <Keyboard showKeyboard={showKeyboard}>
-                <CellContinue>Tiếp tục</CellContinue>
-                <Cell1>1</Cell1>
-                <Cell2>2</Cell2>
-                <Cell3>3</Cell3>
-                <Cell4>4</Cell4>
-                <Cell5>5</Cell5>
-                <Cell6>6</Cell6>
-                <Cell7>7</Cell7>
-                <Cell8>8</Cell8>
-                <Cell9>9</Cell9>
-                <Cell0>0</Cell0>
-                <CellRemove>X</CellRemove>
+            <Keyboard showKeyboard={showKeyboard} onMouseDown={(e) => {
+                e.preventDefault()
+                e.stopPropagation()
+            }}>
+                {cells.map((cell) => <Cell cell={cell}> {cell === 0 ? <ChildrenCell>Tiếp tục</ChildrenCell> : cell === 1 ? "1" : cell === 2 ? "2" : cell === 3 ? "3" : cell === 4 ? "4" : cell === 5 ? "5" : cell === 6 ? "6" : cell === 7 ? "7" : cell === 8 ? "8" : cell === 9 ? "9" : cell === 10 ? "0" : cell === 11 ? "" : "X"} </Cell>)}
             </Keyboard>
 
         </ContainerCol>

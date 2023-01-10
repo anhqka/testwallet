@@ -14,7 +14,7 @@ const Keyboard = styled.div`
     position: fixed;
     width: 100vw;
     transition: all 0.5s ease-out;
-    ${({showKeyboard}) => showKeyboard === false ? "bottom: -125px" : `bottom: 0`}
+    ${({showKeyboard}) => showKeyboard === false ? "bottom: -190px" : `bottom: 0`}
 ;
 `;
 
