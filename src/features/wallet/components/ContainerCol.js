@@ -7,6 +7,6 @@ export const ContainerCol = styled.div`
     justify-content: start;
     height: 100vh;
     width: 90%;
-    grid-gap: 8px;
+    grid-gap: 12px;
     padding: 24px;
 `;

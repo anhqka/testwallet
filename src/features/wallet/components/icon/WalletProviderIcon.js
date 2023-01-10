@@ -6,7 +6,6 @@ export const WalletProviderIcon = styled(CheckOutlined)`
   position: absolute;
   right:0;
   top:0;
-  z-index: 50;
   border-bottom-left-radius: 30px;
   border-top-right-radius: 9px;
   padding: 6px;

@@ -5,8 +5,6 @@ export const Input = styled.input.attrs(({mode}) => ({
     }))`
     background: none;
     outline: none;
-    font-size: 16px;
     color: #19D6FF;
     border: none;
-
 `;

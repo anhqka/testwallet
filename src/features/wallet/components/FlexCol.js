@@ -5,8 +5,10 @@ export const FlexCol = styled.div`
     background-color: #015A80;
     flex-direction: column;
     justify-content: start;
-    margin: 8px 0;
+    align-items: stretch;
+    margin: ${({m}) => m};
     grid-gap: 8px;
     padding: 16px;
     border-radius: 16px;
+
 `;
