@@ -11,13 +11,13 @@ import { Keyboard } from "./components/keyboard/Keyboard"
 
 const Wallet = () => {
     const [showKeyboard, setShowKeyboard] = useState(false)
-    useEffect(() => {
-        const inpPhoneNumber = document.querySelector("#inpPhoneNumber")
-        inpPhoneNumber.addEventListener("blur", (e) => {
-            e.preventDefault()
-            return
-        })
-    }, [])
+    // useEffect(() => {
+    //     const inpPhoneNumber = document.querySelector("#inpPhoneNumber")
+    //     inpPhoneNumber.addEventListener("blur", (e) => {
+    //         e.preventDefault()
+    //         return
+    //     })
+    // }, [])
 
     return (
         <ContainerCol>
@@ -28,7 +28,9 @@ const Wallet = () => {
             <FlexCol>
                 <Span>Số của tôi</Span>
                 <FlexRow borderbAndPadding="true" justifyContent="space-between">
-                    <Input id="inpPhoneNumber" onClick={() => setShowKeyboard(true)} onMouseLeave={() => setShowKeyboard(false)}/>
+                    <Input onMouseOut={(e) => e.preventDefault()} onClick={() => setShowKeyboard(true)} onMouseLeave={() => {
+                        setShowKeyboard(false)
+                    }}/>
                     <img src="https://cdn.pixabay.com/photo/2015/04/19/08/32/marguerite-729510__340.jpg" width={40} />
                 </FlexRow>
             </FlexCol>
