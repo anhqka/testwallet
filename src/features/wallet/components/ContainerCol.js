@@ -6,7 +6,5 @@ export const ContainerCol = styled.div`
     flex-direction: column;
     justify-content: start;
     height: 100vh;
-    width: 90%;
-    grid-gap: 12px;
-    padding: 24px;
+    grid-gap: 16px;
 `;

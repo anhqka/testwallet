@@ -8,7 +8,7 @@ export const FlexCol = styled.div`
     align-items: stretch;
     margin: ${({m}) => m};
     grid-gap: 8px;
-    padding: 16px;
+    padding: 16px; 
     border-radius: 16px;
 
 `;
