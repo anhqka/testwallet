@@ -40,11 +40,11 @@ const MoneyPhoneWallet = () => {
                 }
             </GridCol>
 
-            <FlexCol>
+            <FlexCol bg="#015A80" p="16px">
                 <Span textColor="#19D6FF" textWeight="500">Gần đây</Span>
                 <FlexRow alignItems="center" >
                     <Image src="https://tmdl.edu.vn/wp-content/uploads/2022/07/logo-manchester-united-4.png" w="40px" h="40px" />
-                    <FlexCol>
+                    <FlexCol p="16px">
                         <Span textColor="#fff">Số của tôi</Span>
                         <Span textSize="14px" textColor="#19D6FF">098282822</Span>
                     </FlexCol>

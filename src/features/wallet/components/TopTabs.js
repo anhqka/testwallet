@@ -2,6 +2,7 @@ import styled from 'styled-components';
 
 export const TopTabs = styled.button`
   border: none;
+  margin: ${({m}) => m};
   font-size: 14px;
   font-weight: 600;
   padding: 8px 16px;

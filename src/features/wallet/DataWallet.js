@@ -7,12 +7,13 @@ import { FlexRow } from "./components/FlexRow"
 import { Tabs } from "./components/Tabs"
 import { Span } from "./components/Span"
 import { FlexCol } from "./components/FlexCol"
+import { GridRow } from "./components/GridRow"
 
 const DataWallet = () => {
     const [chooseProvider, setChooseProvider] = useState(1)
     const [choosePackage, setChoosePackage] = useState(30)
     const provArr = Array(4).fill(null)
-    const packageArr = Array(3).fill(null)
+    const packageDataArr = Array(6).fill(null)
 
     return (
         <>
@@ -39,13 +40,18 @@ const DataWallet = () => {
                     flex="1" textAlign="center" textColor="#19D6FF" pb="8px" textWeight="500"> 3 Ngày
                 </Tabs>
             </FlexRow>
-            <FlexRow>
-                <FlexCol bg="#19D6FF" justify="center" alignItems="center">
-                    <Span>3GB/ngày</Span>
-                    <Span>150.000</Span>
-                </FlexCol>
-                
-            </FlexRow>
+            <GridRow gap="16px">
+                {
+                    packageDataArr.map((pack, index) => {
+                        return (
+                            <FlexCol key={index} bg="#013E58" justify="center" alignItems="center" p="8px 0">
+                                <Span textWeight="500" textColor="#19D6FF" >500GB/ngày</Span>
+                                <Span textColor="#19D6FF" >150.000</Span>
+                            </FlexCol>
+                        )
+                    })
+                }
+            </GridRow>
         </>
     )
 }

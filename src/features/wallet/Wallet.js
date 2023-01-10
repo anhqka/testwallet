@@ -5,37 +5,39 @@ import { TopTabs } from "./components/TopTabs"
 import { Input } from "./components/Input"
 import { ContainerCol } from "./components/ContainerCol"
 import { GridCol } from "./components/GridCol"
-import { CheckOutlined } from "@ant-design/icons"
 import { Container } from "./components/Container"
 import MoneyPhoneWallet from "./MoneyPhoneWallet"
 import { useState } from "react"
 import { Image } from "./components/Image"
 import DataWallet from "./DataWallet"
+import { Cell, SubmitCell } from "./components/keyboard/Cell"
+import { ContainerKeyboard } from "./components/keyboard/Keyboard"
+import { ButtonStyle } from "./components/ButtonStyle"
 
 const Wallet = () => {
     const [activeMenu, setActiveMenu] = useState(1)
 
     return (
         <Container>
+            <FlexRow justifyContent="start" position="fixed" z="50" bg="#004766" pb="16px" pt="16px">
+                <TopTabs m="0 16px 0 24px " bg={activeMenu === 1 && activeMenu} onClick={() => setActiveMenu(1)}>Nạp tiền điện thoại</TopTabs>
+                <TopTabs bg={activeMenu === 2 && activeMenu} onClick={() => setActiveMenu(2)}>Nạp data 3G/4G</TopTabs>
+            </FlexRow>
             <ContainerCol>
-                <FlexRow justifyContent="start" position="fixed" z="50" bg="#004766" pb="16px" pt="16px" gap="16px">
-                    <TopTabs bg={activeMenu === 1 && activeMenu} onClick={() => setActiveMenu(1)}>Nạp tiền điện thoại</TopTabs>
-                    <TopTabs bg={activeMenu === 2 && activeMenu} onClick={() => setActiveMenu(2)}>Nạp data 3G/4G</TopTabs>
-                </FlexRow>
-
-                <FlexCol m="70px 0 0 0 " >
+                <FlexCol m="70px 0 0 0 " bg="#015A80" p="16px">
                     <Span textColor="#fff">Số của tôi</Span>
                     <GridCol borderbAndPadding="true" gridCol="9fr 1fr">
                         <Input mode="numeric" />
-                        <Image src="wallet.png" w="30px" h="30px"/>
+                        <Image src="wallet.png" w="30px" h="30px" />
                     </GridCol>
                 </FlexCol>
                 {
                     activeMenu === 1 ? <MoneyPhoneWallet /> : <DataWallet />
                 }
-                
-
             </ContainerCol>
+            <FlexRow botom="0" justifyContent="center" bg="#004766" position="fixed" z="50" pb="16px" pt="16px">
+                    <ButtonStyle w="88%" bg="#015A80" bRadius="16px" p="16px" color="#015A80" textSize="16px" textWeight="500">Tiếp tục</ButtonStyle>
+            </FlexRow>
         </Container>
     )
 }

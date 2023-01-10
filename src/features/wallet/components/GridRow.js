@@ -1,9 +1,9 @@
 import styled from 'styled-components';
 
-export const FlexRow = styled.div`
-    display: flex;
+export const GridRow = styled.div`
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
     width: 100%;
-    flex-direction: row;
     justify-content: ${({justifyContent}) => justifyContent};
     align-items: ${({alignItems}) => alignItems};
     grid-gap: ${({gap}) => gap};
@@ -13,8 +13,4 @@ export const FlexRow = styled.div`
     padding-bottom: ${({pb}) => pb};
     padding-top: ${({pt}) => pt};
     border-bottom: ${({borderB}) => borderB};
-    border: ${({border}) => border};
-    margin: ${({m}) => m};
-    bottom: ${({botom}) => botom};
-    border-radius: ${({bRadius}) => bRadius};
 `;
