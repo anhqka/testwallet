@@ -29,7 +29,7 @@ const Wallet = () => {
                 <Span>Số của tôi</Span>
                 <FlexRow borderbAndPadding="true" justifyContent="space-between">
                     {/* <Input onMouseOut={(e) => e.preventDefault()} onClick={() => setShowKeyboard(true)} /> */}
-                    <input inputMode="numeric"/>
+                    <input inputMode="numeric" pattern="[0-9]*"/>
                     <img src="https://cdn.pixabay.com/photo/2015/04/19/08/32/marguerite-729510__340.jpg" width={40} />
                 </FlexRow>
             </FlexCol>
