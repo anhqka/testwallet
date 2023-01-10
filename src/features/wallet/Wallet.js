@@ -26,7 +26,7 @@ const Wallet = () => {
                     <Span textColor="#fff">Số của tôi</Span>
                     <GridCol borderbAndPadding="true" gridCol="9fr 1fr">
                         <Input mode="numeric" />
-                        <Image src="wallet.png" w="20px" h="20px"/>
+                        <Image src="wallet.png" w="30px" h="30px"/>
                     </GridCol>
                 </FlexCol>
 
