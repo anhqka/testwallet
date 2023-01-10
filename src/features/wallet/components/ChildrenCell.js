@@ -6,4 +6,5 @@ export const ChildrenCell = styled.div`
   margin: 12px 24px;
   padding: 12px 24px;
   border-radius: 90px;
+  text-align: center;
 `;

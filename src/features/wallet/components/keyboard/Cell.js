@@ -2,7 +2,6 @@ import styled from 'styled-components';
 
 const SubmitCell = styled.span`
   background-color: #004766;
-  padding: 12px 24px;
 `;
 
 const Cell = styled.span`

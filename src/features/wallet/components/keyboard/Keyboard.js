@@ -6,7 +6,7 @@ const ContainerKeyboard = styled.div`
   padding: 1.5px;
   position: fixed;
   transition: all 0.5s ease-out;
-  ${({showKeyboard}) => showKeyboard === false ? "bottom: -195px" : `bottom: 0`}
+  ${({showKeyboard}) => showKeyboard === false ? "bottom: -200px" : `bottom: 0`}
 `;
 
 const Keyboard = styled.div`
