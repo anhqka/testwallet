@@ -1,17 +1,18 @@
-import { FlexCol } from "./components/FlexCol"
-import { FlexRow } from "./components/FlexRow"
-import { Span } from "./components/Span"
 import { GridCol } from "./components/GridCol"
-import { Money, WalletProvider, WalletProviderMoney } from "./components/provider/WalletProvider"
+import { WalletProvider } from "./components/provider/WalletProvider"
 import { WalletProviderIcon } from "./components/icon/WalletProviderIcon"
 import { Image } from "./components/Image"
 import { useState } from "react"
+import { FlexRow } from "./components/FlexRow"
+import { Tabs } from "./components/Tabs"
+import { Span } from "./components/Span"
+import { FlexCol } from "./components/FlexCol"
 
-const MoneyPhoneWallet = () => {
+const DataWallet = () => {
     const [chooseProvider, setChooseProvider] = useState(1)
-    const [chooseCard, setChooseCard] = useState(1)
+    const [choosePackage, setChoosePackage] = useState(30)
     const provArr = Array(4).fill(null)
-    const cardArr = Array(4).fill(null)
+    const packageArr = Array(3).fill(null)
 
     return (
         <>
@@ -27,36 +28,26 @@ const MoneyPhoneWallet = () => {
                     })
                 }
             </GridCol>
-
-            <GridCol gridCol="1fr 1fr 1fr" gap="13px">
-                {
-                    cardArr.map((card, index) => {
-                        return (
-                            <WalletProviderMoney  key={index} onClick={() => setChooseCard(index)} bg={chooseCard === index && chooseCard} >
-                                <Money>10.000</Money>
-                            </WalletProviderMoney>
-                        )
-                    })
-                }
-            </GridCol>
-
-            <FlexCol>
-                <Span textColor="#19D6FF" textWeight="500">Gần đây</Span>
-                <FlexRow alignItems="center" >
-                    <Image src="https://tmdl.edu.vn/wp-content/uploads/2022/07/logo-manchester-united-4.png" w="40px" h="40px" />
-                    <FlexCol>
-                        <Span textColor="#fff">Số của tôi</Span>
-                        <Span textSize="14px" textColor="#19D6FF">098282822</Span>
-                    </FlexCol>
-                </FlexRow>
-            </FlexCol>
-            
-            <FlexRow alignItems="center" gap="8px">
-                <Image src="https://tmdl.edu.vn/wp-content/uploads/2022/07/logo-manchester-united-4.png" w="30px" h="30px" />
-                <Span textSize="12px" textColor="#19D6FF">Foxpay đạt chứng chỉ bảo mật quốc tế SSL/TLS. Yên tâm khi thực hiện giao dịch.</Span>
+            <FlexRow justifyContent="space-around">
+                <Tabs onClick={() => setChoosePackage(30)} tabs={choosePackage === 30 && choosePackage}
+                    flex="1" textAlign="center" textColor="#19D6FF" pb="8px" textWeight="500"> 30 Ngày
+                </Tabs>
+                <Tabs onClick={() => setChoosePackage(7)} tabs={choosePackage === 7 && choosePackage}
+                    flex="1" textAlign="center" textColor="#19D6FF" pb="8px" textWeight="500"> 7 Ngày
+                </Tabs>
+                <Tabs onClick={() => setChoosePackage(3)} tabs={choosePackage === 3 && choosePackage}
+                    flex="1" textAlign="center" textColor="#19D6FF" pb="8px" textWeight="500"> 3 Ngày
+                </Tabs>
+            </FlexRow>
+            <FlexRow>
+                <FlexCol bg="#19D6FF" justify="center" alignItems="center">
+                    <Span>3GB/ngày</Span>
+                    <Span>150.000</Span>
+                </FlexCol>
+                
             </FlexRow>
         </>
     )
 }
 
-export default MoneyPhoneWallet
+export default DataWallet

@@ -12,4 +12,5 @@ export const FlexRow = styled.div`
     position: ${({position}) => position};
     padding-bottom: ${({pb}) => pb};
     padding-top: ${({pt}) => pt};
+    border-bottom: ${({borderB}) => borderB};
 `;

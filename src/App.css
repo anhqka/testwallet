@@ -42,3 +42,29 @@
     font-size: 16px !important;
   }
 }
+.adm-tabs-tab-active {
+  color: black !important;
+}
+
+
+.adm-tabs-tab-active {
+    color: var(--active-title-color);
+}
+.adm-tabs-tab {
+    white-space: nowrap;
+    padding: 8px 0 10px;
+    width: min-content;
+    margin: 0 auto;
+    font-size: var(--title-font-size);
+    position: relative;
+    cursor: pointer;
+}
+
+.adm-tabs-tab-active {
+    color: #015A80 !important;
+}
+.adm-tabs {
+    --active-line-color: #19D6FF !important;
+    --active-title-color: #19D6FF !important;
+
+}

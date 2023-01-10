@@ -9,7 +9,7 @@ export const WalletProviderIcon = styled.img.attrs(({ src }) => ({
   top:0;
   border-bottom-left-radius: 30px;
   border-top-right-radius: 9px;
-  padding: 5px;
+  padding: 8px;
   background-color: #19D6FF;
   width: ${({ w }) => w};
     height: ${({ h }) => h};

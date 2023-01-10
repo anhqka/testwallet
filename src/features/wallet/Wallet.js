@@ -10,6 +10,7 @@ import { Container } from "./components/Container"
 import MoneyPhoneWallet from "./MoneyPhoneWallet"
 import { useState } from "react"
 import { Image } from "./components/Image"
+import DataWallet from "./DataWallet"
 
 const Wallet = () => {
     const [activeMenu, setActiveMenu] = useState(1)
@@ -29,8 +30,11 @@ const Wallet = () => {
                         <Image src="wallet.png" w="30px" h="30px"/>
                     </GridCol>
                 </FlexCol>
+                {
+                    activeMenu === 1 ? <MoneyPhoneWallet /> : <DataWallet />
+                }
+                
 
-                <MoneyPhoneWallet />
             </ContainerCol>
         </Container>
     )
