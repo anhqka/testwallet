@@ -29,22 +29,22 @@ const Wallet = () => {
                 <Span>Số của tôi</Span>
                 <FlexRow borderbAndPadding="true" justifyContent="space-between">
                     {/* <Input onMouseOut={(e) => e.preventDefault()} onClick={() => setShowKeyboard(true)} /> */}
-                    <input inputMode="numeric" pattern="[0-9]*"/>
+                    <input inputMode="numeric" onBeforeInput={false}/>
                     <img src="https://cdn.pixabay.com/photo/2015/04/19/08/32/marguerite-729510__340.jpg" width={40} />
                 </FlexRow>
             </FlexCol>
 
-            <ContainerKeyboard showKeyboard={showKeyboard} onMouseDown={(e) => {
+            {/* <ContainerKeyboard showKeyboard={showKeyboard} onMouseDown={(e) => {
                     e.preventDefault()
                     e.stopPropagation()
                 }}>
                     
                 {cells.map((cell) => cell === 0 && <SubmitCell>  <ChildrenCell>Tiếp tục</ChildrenCell>  </SubmitCell>)}
-                {/* <Keyboard >
+                <Keyboard >
                     {cells.map((cell) => <Cell cell={cell}> {cell === 1 ? "1" : cell === 2 ? "2" : cell === 3 ? "3" : cell === 4 ? "4" : cell === 5 ? "5" : cell === 6 ? "6" : cell === 7 ? "7" : cell === 8 ? "8" : cell === 9 ? "9" : cell === 10 ? "0" : cell === 12 ? "X" : ""} </Cell>
                     )}
-                </Keyboard> */}
-            </ContainerKeyboard>
+                </Keyboard>
+            </ContainerKeyboard> */}
         </ContainerCol>
     )
 }
