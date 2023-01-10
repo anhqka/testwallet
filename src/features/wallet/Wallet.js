@@ -16,13 +16,13 @@ const Wallet = () => {
     return (
         <Container>
             <ContainerCol>
-                <FlexRow justifyContent="start" position="fixed" z="50" bg="#004766" pb="16px" pt="16px">
+                <FlexRow justifyContent="start" position="fixed" z="50" bg="#004766" pb="16px" pt="16px" gap="16px">
                     <TopTabs>Nạp tiền điện thoại</TopTabs>
                     <TopTabs>Nạp data 3G/4G</TopTabs>
                 </FlexRow>
 
                 <FlexCol m="70px 0 0 0 " >
-                    <Span>Số của tôi</Span>
+                    <Span textColor="#fff">Số của tôi</Span>
                     <GridCol borderbAndPadding="true" gridCol="9fr 1fr">
                         <Input mode="numeric" />
                         <CheckOutlined />
@@ -64,15 +64,19 @@ const Wallet = () => {
                     </WalletProviderMoney>
                 </GridCol>
                 <FlexCol>
-                    <Span>Gần đây</Span>
-                    <FlexRow alignItems="center">
+                    <Span textColor="#19D6FF" textWeight="500">Gần đây</Span>
+                    <FlexRow alignItems="center" >
                         <Image src="https://tmdl.edu.vn/wp-content/uploads/2022/07/logo-manchester-united-4.png" w="40px" h="40px" />
-                        <FlexCol >
-                            <Span>Số của tôi</Span>
-                            <Span>098282822</Span>
+                        <FlexCol>
+                            <Span textColor="#fff">Số của tôi</Span>
+                            <Span textColor="#19D6FF">098282822</Span>
                         </FlexCol>
                     </FlexRow>
                 </FlexCol>
+                <FlexRow alignItems="center" gap="8px">
+                    <Image src="https://tmdl.edu.vn/wp-content/uploads/2022/07/logo-manchester-united-4.png" w="30px" h="30px" />
+                    <Span textSize="12px" textColor="#19D6FF">Foxpay đạt chứng chỉ bảo mật quốc tế SSL/TLS. Yên tâm khi thực hiện giao dịch.</Span>
+                </FlexRow>
             </ContainerCol>
         </Container>
     )

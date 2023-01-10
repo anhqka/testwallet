@@ -10,5 +10,4 @@ export const FlexCol = styled.div`
     grid-gap: 8px;
     padding: 16px; 
     border-radius: 16px;
-
 `;
