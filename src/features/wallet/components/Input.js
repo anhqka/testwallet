@@ -8,4 +8,5 @@ export const Input = styled.input.attrs(() => ({
     font-size: 16px;
     color: #19D6FF;
     border: none;
+    
 `;

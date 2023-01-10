@@ -5,8 +5,8 @@ import { TopTabs } from "./components/TopTabs"
 import { Input } from "./components/Input"
 import { useState } from "react"
 import { ContainerCol } from "./components/ContainerCol"
-import { Cell, CellContinue } from "./components/keyboard/Cell"
-import { Keyboard } from "./components/keyboard/Keyboard"
+import { Cell, CellContinue, SubmitCell } from "./components/keyboard/Cell"
+import { ContainerKeyboard, Keyboard } from "./components/keyboard/Keyboard"
 import { ChildrenCell } from "./components/ChildrenCell"
 
 
@@ -33,12 +33,17 @@ const Wallet = () => {
                 </FlexRow>
             </FlexCol>
 
-            <Keyboard showKeyboard={showKeyboard} onMouseDown={(e) => {
-                e.preventDefault()
-                e.stopPropagation()
-            }}>
-                {cells.map((cell) => <Cell cell={cell}> {cell === 0 ? <ChildrenCell>Tiếp tục</ChildrenCell> : cell === 1 ? "1" : cell === 2 ? "2" : cell === 3 ? "3" : cell === 4 ? "4" : cell === 5 ? "5" : cell === 6 ? "6" : cell === 7 ? "7" : cell === 8 ? "8" : cell === 9 ? "9" : cell === 10 ? "0" : cell === 11 ? "" : "X"} </Cell>)}
-            </Keyboard>
+            <ContainerKeyboard showKeyboard={showKeyboard} onMouseDown={(e) => {
+                    e.preventDefault()
+                    e.stopPropagation()
+                }}>
+                    
+                {cells.map((cell) => cell === 0 && <SubmitCell>  <ChildrenCell>Tiếp tục</ChildrenCell>  </SubmitCell>)}
+                <Keyboard >
+                    {cells.map((cell) => <Cell cell={cell}> {cell === 1 ? "1" : cell === 2 ? "2" : cell === 3 ? "3" : cell === 4 ? "4" : cell === 5 ? "5" : cell === 6 ? "6" : cell === 7 ? "7" : cell === 8 ? "8" : cell === 9 ? "9" : cell === 10 ? "0" : cell === 12 ? "X" : ""} </Cell>
+                    )}
+                </Keyboard>
+            </ContainerKeyboard>
 
         </ContainerCol>
     )
