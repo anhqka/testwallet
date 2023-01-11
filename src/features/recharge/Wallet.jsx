@@ -25,7 +25,7 @@ const Wallet = () => {
     return (
         <Container>
             <FlexRow justifyContent="start" position="fixed" z="50" bg="#004766" pb="16px" pt="16px">
-                <TopTabs m="0 16px 0 24pxs" bg={activeMenu === 1 && activeMenu} onClick={() => setActiveMenu(1)}>Nạp tiền điện thoại</TopTabs>
+                <TopTabs m="0 16px 0 24px" bg={activeMenu === 1 && activeMenu} onClick={() => setActiveMenu(1)}>Nạp tiền điện thoại</TopTabs>
                 <TopTabs bg={activeMenu === 2 && activeMenu} onClick={() => setActiveMenu(2)}>Nạp data 3G/4G</TopTabs>
             </FlexRow>
             
