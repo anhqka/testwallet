@@ -10,12 +10,17 @@ import MoneyPhoneWallet from "./MoneyPhoneWallet"
 import { useState } from "react"
 import { Image } from "./components/Image"
 import DataWallet from "./DataWallet"
-import { Cell, SubmitCell } from "./components/keyboard/Cell"
-import { ContainerKeyboard } from "./components/keyboard/Keyboard"
 import { ButtonStyle } from "./components/ButtonStyle"
 
 const Wallet = () => {
     const [activeMenu, setActiveMenu] = useState(1)
+    const [phoneNumber, setPhoneNumber] = useState(0)
+
+    let allowContinue = phoneNumber.length >= 10 && phoneNumber.length <= 11
+
+    const handleGetPhoneNumber= (e) => {
+        setPhoneNumber(e.target.value)
+    }
 
     return (
         <Container>
@@ -27,7 +32,7 @@ const Wallet = () => {
                 <FlexCol m="70px 0 0 0 " bg="#015A80" p="16px">
                     <Span textColor="#fff">Số của tôi</Span>
                     <GridCol borderbAndPadding="true" gridCol="9fr 1fr">
-                        <Input mode="numeric" />
+                        <Input mode="numeric" onChange={handleGetPhoneNumber}/>
                         <Image src="wallet.png" w="30px" h="30px" />
                     </GridCol>
                 </FlexCol>
@@ -36,7 +41,7 @@ const Wallet = () => {
                 }
             </ContainerCol>
             <FlexRow botom="0" justifyContent="center" bg="#004766" position="fixed" z="50" pb="16px" pt="16px">
-                    <ButtonStyle w="88%" bg="#015A80" bRadius="16px" p="16px" color="#015A80" textSize="16px" textWeight="500">Tiếp tục</ButtonStyle>
+                    <ButtonStyle disabled={!allowContinue} w="88%" bg="#015A80" bRadius="16px" p="16px" color="#015A80" textSize="16px" textWeight="500">Tiếp tục</ButtonStyle>
             </FlexRow>
         </Container>
     )
