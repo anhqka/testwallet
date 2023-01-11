@@ -17,6 +17,5 @@ export const FlexRow = styled.div`
     margin: ${({m}) => m};
     bottom: ${({botom}) => botom};
     border-radius: ${({bRadius}) => bRadius};
-    overflow-y:scroll;
-    overflow-x:hidden;
+
 `;
