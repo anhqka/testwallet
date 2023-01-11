@@ -4,7 +4,6 @@ export const ButtonStyle = styled.button`
     font-size: ${({textSize}) => textSize };
     color: ${({textColor}) => textColor};
     width: ${({w}) => w};
-    background-color: ${({bg}) => bg};
     font-weight: ${({textWeight}) => textWeight};
     padding-bottom: ${({pb}) => pb};
     padding: ${({p}) => p};
@@ -14,4 +13,15 @@ export const ButtonStyle = styled.button`
     outline: none;
     border-radius: ${({bRadius}) => bRadius};
     border: none;
+    ${({ bg }) => bg
+    ? `
+         background-color: #19D6FF;
+         color:  #013E58;
+         font-weight: 600;
+    `
+    : `
+      background-color: #015A80;
+      color: #15A0BE;
+      font-weight: 600;
+    `}
 `;
