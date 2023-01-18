@@ -6,6 +6,7 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import './index.css';
 import Recharge from './features/recharge/Wallet';
+import TestInputOtp from './features/Test';
 
 const container = document.getElementById('root');
 const root = createRoot(container);
@@ -13,7 +14,7 @@ const root = createRoot(container);
 root.render(
   <React.StrictMode>
     <Provider store={store}>
-      <Recharge />
+      <TestInputOtp />
     </Provider>
   </React.StrictMode>
 );
