@@ -11,7 +11,6 @@ const TestInputOtp = () => {
   const [nowInput, setNowInput] = useState(1)
 
   const focusInput = () => {
-    
     if (input1.current.value.length === 1) {
       input2.current.focus();
       setNowInput(2)
