@@ -26,8 +26,10 @@ const TestInputOtp = () => {
     }
   };
 
-  const onChange = () => {
+  const onChange = (e) => {
     focusInput()
+    console.log(e);
+    alert(1)
   };
 
   const onClick = () => {
