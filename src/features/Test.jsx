@@ -28,8 +28,9 @@ const TestInputOtp = () => {
 
   const onChange = (e) => {
     focusInput()
-    console.log(e);
-    alert(1)
+    if(e.nativeEvent.inputType === "deleteContentBackward"){
+      alert(1)
+    }
   };
 
   const onClick = () => {
