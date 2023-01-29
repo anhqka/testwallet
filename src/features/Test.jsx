@@ -1,30 +1,85 @@
-import { useState } from 'react';
+import { useEffect, useRef, useState } from "react";
 
 const TestInputOtp = () => {
-  const nums = document.querySelectorAll('input');
-  const form = document.querySelector('form');
+  const input1 = useRef();
+  const input2 = useRef();
+  const input3 = useRef();
+  const input4 = useRef();
+  const input5 = useRef();
+  const input6 = useRef();
 
-  nums.forEach((num, index) => {
-    num.dataset.id = index;
+  const focusInput = () => {
+    if (input1.current.value.length === 1) {
+      input2.current.focus();
+    }
+    if (input2.current.value.length === 1) {
+      input3.current.focus();
+    }
+    if (input3.current.value.length === 1) {
+      input4.current.focus();
+    }
+    if (input4.current.value.length === 1) {
+      input5.current.focus();
+    }
+    if (input5.current.value.length === 1) {
+      input6.current.focus();
+    }
+  };
 
-    num.addEventListener('keyup', () => {
-      if (num.value.length == 1) {
-        if (nums[nums.length - 1].value.length == 1) form.submit();
-        nums[parseInt(num.dataset.id) + 1].focus();
-       
-      }
-    });
-  });
+  const onChange = () => {
+    focusInput()
+  };
 
-
-  const [otpPhone, setOtpPhone] = useState(['', '', '', '', '', '']);
+  const onClick = () => {
+    input1.current.focus();
+    focusInput()
+  };
 
   return (
     <div>
       <form>
-        {otpPhone.map((otp) => {
-          return <input maxLength={1} mode="numeric"/>;
-        })}
+        <input
+          maxLength={1}
+          mode="numeric"
+          ref={input1}
+          onChange={onChange}
+          onClick={onClick}
+        />
+        <input
+          maxLength={1}
+          mode="numeric"
+          ref={input2}
+          onChange={onChange}
+          onClick={onClick}
+        />
+        <input
+          maxLength={1}
+          mode="numeric"
+          ref={input3}
+          onChange={onChange}
+          onClick={onClick}
+        />
+        <input
+          maxLength={1}
+          mode="numeric"
+          ref={input4}
+          onChange={onChange}
+          onClick={onClick}
+        />
+        <input
+          maxLength={1}
+          mode="numeric"
+          ref={input5}
+          onChange={onChange}
+          onClick={onClick}
+        />
+        <input
+          maxLength={1}
+          mode="numeric"
+          ref={input6}
+          onChange={onChange}
+          onClick={onClick}
+        />
       </form>
     </div>
   );
