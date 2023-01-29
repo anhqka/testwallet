@@ -40,42 +40,42 @@ const TestInputOtp = () => {
       <form>
         <input
           maxLength={1}
-          mode="numeric"
+          type="number" pattern="[0-9]*" inputmode="numeric"
           ref={input1}
           onChange={onChange}
           onClick={onClick}
         />
         <input
           maxLength={1}
-          mode="numeric"
+          type="number" pattern="[0-9]*" inputmode="numeric"
           ref={input2}
           onChange={onChange}
           onClick={onClick}
         />
         <input
           maxLength={1}
-          mode="numeric"
+          type="number" pattern="[0-9]*" inputmode="numeric"
           ref={input3}
           onChange={onChange}
           onClick={onClick}
         />
         <input
           maxLength={1}
-          mode="numeric"
+          type="number" pattern="[0-9]*" inputmode="numeric"
           ref={input4}
           onChange={onChange}
           onClick={onClick}
         />
         <input
           maxLength={1}
-          mode="numeric"
+          type="number" pattern="[0-9]*" inputmode="numeric"
           ref={input5}
           onChange={onChange}
           onClick={onClick}
         />
         <input
           maxLength={1}
-          mode="numeric"
+          type="number" pattern="[0-9]*" inputmode="numeric"
           ref={input6}
           onChange={onChange}
           onClick={onClick}
